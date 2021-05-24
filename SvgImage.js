@@ -66,9 +66,15 @@ class SvgImage extends Component {
   };
   render() {
     const props = this.props;
-    const { svgContent } = this.state;
+    let { svgContent } = this.state;
     if (svgContent) {
       const flattenedStyle = StyleSheet.flatten(props.style) || {};
+      
+      if(props.style.color){
+        svgContent = svgContent.replace(/fill="(.*?)"/gi, `fill="${props.style.color}"`)
+        svgContent = svgContent.replace(/.cls-1{fill:(.*?);}/gi, `.cls-1{fill:${props.style.color};}`)
+      }
+      
       const html = getHTML(svgContent, flattenedStyle);
 
       return (
