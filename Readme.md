@@ -9,6 +9,8 @@ Using [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/):
 
     $ yarn add react-native-colored-remote-svg
 
+    Modified @seekshiva react-native-remote-svg
+
 `Image` component in react-native doesn't yet support svg file type. This
 package gives you an `Image` component that supports both svg and png file
 types.
