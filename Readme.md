@@ -74,7 +74,7 @@ You can load normal jpg/png images as well
 ```js
 <Image
   source={{ uri: 'https://example.com/my-other-pic.png' }
-  style={{ width: 100, height: 120}}
+  style={{ width: 100, height: 120, color: 'green'}}
 />
 ```
 
