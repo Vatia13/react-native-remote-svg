@@ -1,11 +1,12 @@
 {
-  "name": "react-native-remote-svg",
-  "description": "Load svg images in react-native",
-  "repository": "seekshiva/react-native-remote-svg",
+  "name": "react-native-colored-remote-svg",
+  "description": "Load and style svg images in react-native",
+  "repository": "Vatia13/react-native-colored-remote-svg",
   "version": "2.0.6",
   "main": "index.js",
   "authors": [
-    "Shiva Nandan"
+    "Shiva Nandan",
+    "Vati Child"
   ],
   "license": "MIT",
   "peerDependencies": {

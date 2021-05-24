@@ -1,4 +1,4 @@
-# react-native-remote-svg
+# react-native-colored-remote-svg
 
 `Image` component that supports svg filetype in
 [React Native](https://facebook.github.io/react-native).
@@ -7,7 +7,7 @@
 
 Using [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/):
 
-    $ yarn add react-native-remote-svg
+    $ yarn add react-native-colored-remote-svg
 
 `Image` component in react-native doesn't yet support svg file type. This
 package gives you an `Image` component that supports both svg and png file
@@ -31,13 +31,13 @@ You need to import `Image` from this package instead of from react-native
 
 ```diff
 - import { Image } from 'react-native'
-+ import Image from 'react-native-remote-svg'
++ import Image from 'react-native-colored-remote-svg'
 ```
 
 and you can use this Image component like you normally would:
 
 ```js
-import Image from 'react-native-remote-svg';
+import Image from 'react-native-colored-remote-svg';
 
 <Image
   source={{ uri: 'https://example.com/my-pic.svg' }}
@@ -48,7 +48,7 @@ import Image from 'react-native-remote-svg';
 supports data uri as well:
 
 ```js
-import Image from 'react-native-remote-svg';
+import Image from 'react-native-colored-remote-svg';
 
 <Image
   source={{
@@ -61,7 +61,7 @@ import Image from 'react-native-remote-svg';
 ```
 
 **Note:** When you load an image from the internet, you need to specify
-width/height of the image (default to 100, 100).
+width/height and color of the image (default to 100, 100).
 
 When you load a local image, width/height are not mandatory:
 
@@ -69,12 +69,12 @@ When you load a local image, width/height are not mandatory:
 <Image source={require('./image.svg')} />
 ```
 
-You can load normal jpg/png images as well
+You can load normal jpg/png images as well. Here u can't use color style
 
 ```js
 <Image
   source={{ uri: 'https://example.com/my-other-pic.png' }
-  style={{ width: 100, height: 120, color: 'green'}}
+  style={{ width: 100, height: 120}}
 />
 ```
 
