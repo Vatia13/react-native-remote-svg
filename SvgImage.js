@@ -72,7 +72,10 @@ class SvgImage extends Component {
       
       if(props.style.color){
         svgContent = svgContent.replace(/fill="(.*?)"/gi, `fill="${props.style.color}"`)
-        svgContent = svgContent.replace(/.cls-1{fill:(.*?);}/gi, `.cls-1{fill:${props.style.color};}`)
+      }
+      
+      if(props.styleSvg){
+        svgContent = svgContent.replace(/<style>(.*?)<\/style>/gi, `<style>${props.styleSvg}</style>`)
       }
       
       const html = getHTML(svgContent, flattenedStyle);
