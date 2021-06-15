@@ -17,6 +17,11 @@ const MyImage = props => {
     }
     return <SvgImage {...props} source={source} style={style} />;
   } else {
+    if(props.style?.color){
+      const style = props.style;
+      delete style.color;
+      props.style = style;
+    }
     return <Image {...props} />;
   }
 };
